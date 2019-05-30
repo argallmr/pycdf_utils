@@ -116,8 +116,9 @@ def vattrvalue(filename, varname, vattrname):
     return value
 
 
+"""
 def read(filenames, variables):
-    """
+    \"""
     Read variables from a CDF file.
     
     Parameters
@@ -132,7 +133,7 @@ def read(filenames, variables):
     =======
     vars : tuple
         A tsdata objects for each variable.
-    """
+    \"""
     global CDF_VARS
     global FILE_VARS
     global SUPPORT_VARS
@@ -174,9 +175,9 @@ def read(filenames, variables):
 
 
 def _read_reset():
-    """
+    \"""
     Reset the global variables used by read()
-    """
+    \"""
     global CDF_VARS
     global FILE_VARS
     global SUPPORT_VARS
@@ -187,7 +188,7 @@ def _read_reset():
 
 
 def _read_var(cdf, varname):
-    """
+    \"""
     Read data and collect metadata from a CDF variable.
     
     Parameters
@@ -196,7 +197,7 @@ def _read_var(cdf, varname):
         A spacepy.pycdf.CDF object of the CDF file being read.
     varname : str
         The name of the CDF variable to be read
-    """
+    \"""
     global CDF_VARS
     global FILE_VARS
     
@@ -229,7 +230,7 @@ def _read_var(cdf, varname):
 
 
 def _read_var_attrs(cdf, var):
-    """
+    \"""
     Read metadata from a CDF variable.
     
     Parameters
@@ -244,7 +245,7 @@ def _read_var_attrs(cdf, var):
     ==========
     var : object
         The input tsdata object with new attributes.
-    """
+    \"""
     global SUPPORT_VARS
     
     # Add each attribute as a 
@@ -325,7 +326,7 @@ class cdfdata:
         
         plt.show()
     
-    """
+    
     @property
     def x0(self):
         return self.x0
@@ -369,4 +370,4 @@ class cdfdata:
             ValueError('x3 is incorrect size.')
         else:
             self._x3 = value
-    """
+"""
